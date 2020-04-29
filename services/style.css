@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  overflow-x: hidden;
+  background-image: url(images/1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+}
+.logo{
+  width: 15%;
+  height: 45px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px 0px 0px 30px;
+  float: left;
+}
+ nav ul{
+  float: right;
+  margin: 15px 30px 0px 0px;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0px 40px 0px 0px;
+  transition: 0.5s;
+}
+nav ul li:hover{
+  transform: translateY(-4px);
+  color: black;
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Varela Round', serif;
+  font-size: 18px;
+  transition: 0.5s;
+}
+nav ul li a:hover{
+  color: #0082e6;
+}
+.active{
+  color: #0082e6;
+  font-weight: bold;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  float: left;
+}
+
+.banner h1{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: lighter;
+  float: left;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin: 10% 0 0  10%;
+}
+.banner p{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: lighter;
+  padding: 2% 0 0 10%;
+  float: left;
+  font-size: 25px;
+  letter-spacing: 2px;
+  width: 50%;
+}
+.banner p:nth-child(3){
+  margin-bottom: 10%;
+}
+.arrow{
+  width: 5%;
+  height: 5%;
+  background-image: url(images/arrowdawn.png);
+  background-size: cover;
+  background-position:center;
+  animation-name: arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: 0.5s;
+  margin: 20% 0 0 45%;
+  float: left;
+  cursor: pointer;
+}
+@keyframes arrow {
+  0%{
+
+    margin-top: 3.5%;
+  }
+  50%{
+    margin-top: 2%;
+
+  }
+
+  100%{
+    margin-top: 3.5%;
+
+  }
+}
+.bannertwo{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top:30%;
+
+
+}
+.bannertwo h1{
+  width: 100%;
+  height: 10vh;
+  color: white;
+  float: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.bannertwo p{
+  width: 100%;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  float: left;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+.bannertwo span{
+  width: 100%;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  float: left;
+  text-align: center;
+
+}
+.bannertwo span a{
+  color: white;
+  font-size: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  padding: 10px 40px;
+  background-color: rgba(200, 0, 255, 0.8);
+  transition: 0.3s;
+  letter-spacing: 5px;
+}
+.bannertwo span a:hover{
+  box-shadow: 0 0 10px 5px black;
+  color: black;
+}
+.wrapper{
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.ul{
+  width: 200%;
+  height: 10vh;
+  color: ;
+
+}
+.ul .li{
+  display: inline;
+  width: 12%;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  float:left;
+  font-weight: bold;
+}
+.ul .li:nth-child(1){
+  margin-left: 0.2%;
+}
+.ul .li:nth-child(2){
+  margin-left: 0.6%;
+}
+.ul .li:nth-child(3){
+  margin-left: 0.3%;
+}
+.ul .li:nth-child(4){
+  margin-left: 0.6%;
+}
+.ul .li:nth-child(5){
+  margin-left: 0.4%;
+}
+.ul .li:nth-child(6){
+  margin-left: 0.6%;
+}
+.ul .li:nth-child(7){
+  margin-left: 0.4%;
+}
+.ul .li:nth-child(8){
+  margin-left: 0.6%;
+}
+tr td a{
+  color: #00CCCC;
+  text-decoration: underline;
+}
+
+input{
+  width: 80%;
+  height: 5vh;
+  margin: 5% 0 5% 10%;
+  padding: 0 0 0 1%;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 5px 5px white;
+  border: none;
+}
+::-webkit-input-placeholder{
+  color: white;
+}
+table{
+  width: 200%;
+  height: 20vh;
+  border-collapse: collapse;
+  text-align: center;
+  overflow-x: scroll;
+
+
+}
+.overflow{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width:100%;
+  height: 40vh;
+  margin-right: 4%;
+  padding-bottom: 1%;
+}
+table tr{
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+table tr td{
+  width: 5%;
+  height: 10vh;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+
+
+
+
+
+#footer{
+  font-family: 'Orbitron', serif;
+  background-color: rgb(5,5,10);
+  position: relative;
+  height: 100px;
+  float: left;
+  width: 100%;
+  top:0;
+  position: static;
+}
+.f_logo{
+  width: 20%;
+  height: 60%;
+  float: left;
+  background-image: url(images/logo.png);
+  background-size: cover;
+  margin-top: 8px;
+}
+.cp{
+  width: 60%;
+  height: 40%;
+  color: white;
+  margin: 4.3% 0 0 0;
+  float: left;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.si{
+  width: 20%;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.si a,
+.si a span{
+  font-size: 25px;
+  margin: 0 10% 0 0%;
+  color: white;
+  transition: 0.5s;
+}
+.si a span:hover{
+  color: dodgerblue;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #778899;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#202020;
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+body{
+  background-image: url(images/1.jpg);
+  background-size: cover;
+}
+
+h1{
+  font-size: 40px;
+  float: left;
+}
+a{
+  font-size: 25px;
+  margin: 10% 0 0 30%;
+  float: left;
+}
+a:hover{
+  color: yellow;
+}
+.congratulation{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  height:50vh;
+  width: 50%;
+  margin: 5% 0 0 22%;
+}

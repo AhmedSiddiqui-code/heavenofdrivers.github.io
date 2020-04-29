@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+body{
+  background-image: url(images/1.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+
+}
+.logo{
+  width: 40%;
+  height: 20%;
+  position: absolute;
+  margin: 25% 0 0 5%;
+  background-image: url(images/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.signin{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  width: 40%;
+  height: 100vh;
+  float: right;
+  text-align: center;
+  box-sizing: border-box;
+}
+.signin h2{
+  padding: 10% 0;
+}
+a{
+  font-size: 15px;
+  text-decoration: blink;
+}
+a:hover{
+  color: yellow ;
+}
+input[type = text],input[type = password]{
+  width: 80%;
+  height: 5vh;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 18px;
+  transition: 1s;
+  outline: none;
+  margin: 5% 0 0 0 ;
+}
+::-webkit-input-placeholder{
+  color: lightblue;
+  text-align: left;
+  transition: 1s;
+}
+input[type = submit]{
+  width: 30%;
+  text-align: center;
+  background-color:rgba(0,0,0,0.5);
+  border: none;
+  line-height: 25px;
+  cursor: pointer;
+  margin: 5% 0 0 0;
+  font-size: 15px;
+  transition: 0.5s;
+  height: 5vh;
+}
+input[type = submit]:hover{
+  box-shadow: 0 0 10px 0 white;
+}
+span{
+  width: 100%;
+  height: 5vh;
+  float: left;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+span p{
+  color: red;
+}
+.signup{
+  margin: 15% 0 0 0;
+}
+.leftcontent{
+  width: 60%;
+  height: 100vh;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-right: 1px solid white;
+  box-sizing: border-box;
+}
+.contentone{
+  width: 100%;
+  height: 25%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  font-weight: lighter;
+}
+.contenttwo{
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.contenttwo p{
+  width: 58%;
+  padding: 40px;
+}
+.contentthree{
+  width: 100%;
+  height:15%;
+  margin:  30% 0 0 0;
+  float: left;
+  font-size: 18px;
+}
+.contentthree p{
+  line-height: 40px;
+  margin-left: 5%;
+}

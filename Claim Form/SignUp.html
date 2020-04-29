@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="SignUp.css">
+  </head>
+  <body>
+    <div class="leftContent">
+      <div class="logo"></div>
+      <div class="contentone">
+        <p>Please Sign Up To Join Us</p>
+      </div>
+      <div class="contenttwo">
+        <p>if you have already have an acount please : &nbsp;&nbsp;<a href="LogIn.html" style="font-size:20px;">click here &nbsp;&nbsp;&nbsp;</a> to Log In. </p>
+      </div>
+      <div class="contenttwo">
+        <p>if you want to back home please : <a href="file:///C:/Users/Ahmed%20Siddiqui/OneDrive/Web/Project/index.html" style="font-size:20px;">click here  </a> </p>
+      </div>
+      <div class="contentthree">
+        <p> Cell # : &nbsp; +92 - 336 - 3550611</p>
+        <p> Email  : m.ahmedsiddiqui@outlook.com</p>
+      </div>
+    </div>
+    <div class="signup">
+        <form action="CongratulationLogIn.html" onsubmit="return validation();" method="post">
+        <h2>Sign Up</h2>
+        <input type="text" id="usernameone" placeholder="First Name" autocomplete="off"><br>
+        <span> <p id="invalidfirstname"></p> </span>
+        <input type="text" id="usernametwo" placeholder="Last Name" autocomplete="off"><br>
+        <span> <p id="invalidlastname"></p> </span>
+        <input type="password" id="passwordone" placeholder="Password"><br>
+        <span> <p id="invalidpasswordone" ></p> </span>
+        <input type="password" id="passwordtwo" placeholder="Confirm Password"><br>
+        <span> <p id="invalidpasswordtwo" ></p> </span>
+        <input type="text" id="email" placeholder="Email Address" autocomplete="off"><br>
+        <span> <p id="invalidemail" ></p> </span>
+        <a><input type="submit" id="signup" name="submit"  value="Sign Up"></a>
+        </form>
+        <p class="login">already have an account ? <a href="LogIn.html"> Log In </a></p>
+    </div>
+
+
+    <script type="text/javascript">
+    var usernameone =  document.getElementById('usernameone');
+    var usernametwo =  document.getElementById('usernametwo');
+    var passwordone =  document.getElementById('passwordone');
+    var passwordtwo =  document.getElementById('passwordtwo');
+    var email =  document.getElementById('email');
+    var checkuname = /^[A-Za-z]{4,12}$/;
+    var checkpss =  /^(?=.*[A-Z]{3,})(?=.*[a-z]{3,})(?=.*[0-9]{3,})[A-Za-z0-9!?]{8,20}$/;
+    var checkem =  /^([a-z\d\.-]+)\@([a-z\d-]+)\.([a-z]{3})(\.[a-z]{2})?$/;
+
+
+    function validation(){
+
+      // FIRST NAME VALIDATION =========================
+      if (usernameone) {
+        if(usernameone.value == ""){
+          document.getElementById('invalidfirstname').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (checkuname.test(usernameone.value)) {
+          document.getElementById('invalidfirstname').innerHTML = "";
+        }
+        else{
+          document.getElementById('invalidfirstname').innerHTML = "charechter must be alphebets & less than 12";
+          return false;
+        }// FIRDT NAME VALIDATION ENDS =============================
+      }
+
+
+      // LAST NAME VALIDATION =========================
+      if (usernametwo) {
+        if(usernametwo.value == ""){
+          document.getElementById('invalidlastname').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (checkuname.test(usernametwo.value)) {
+          document.getElementById('invalidlastname').innerHTML = "";
+        }
+        else{
+          document.getElementById('invalidlastname').innerHTML = "charechter must be alphebets & between 4-12";
+          return false;
+        }// LAST NAME VALIDATION ENDS =============================
+      }
+
+
+      // PASSWORD VALIDATION =========================
+      if (passwordone) {
+        if(passwordone.value == ""){
+          document.getElementById('invalidpasswordone').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (checkpss.test(passwordone.value)) {
+          document.getElementById('invalidpasswordone').innerHTML = "";
+        }
+        else{
+          document.getElementById('invalidpasswordone').innerHTML = "numbers uppercase & lowercase must be use atleast 3 times <br> special charechters are not allowed";
+          return false;
+        }
+      }
+      if (passwordtwo) {
+        if (passwordtwo.value == "") {
+          document.getElementById('invalidpasswordtwo').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (passwordone.value != passwordtwo.value) {
+          document.getElementById('invalidpasswordtwo').innerHTML = "password didn't match";
+          return false;
+        }
+      }// PASSWORD VALIDATION ENDS ========================
+
+      if (email) {
+        if (email.value == "") {
+          document.getElementById('invalidemail').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (checkem.test(email.value)) {
+          document.getElementById('invalidemail').innerHTML = "";
+        }
+        else{
+          document.getElementById('invalidemail').innerHTML = "please write in correct format";
+          return false;
+        }
+      }
+
+
+    }
+
+    </script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+
+}
+body{
+  background-image: url(images/1.jpg);
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+.Content{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.logo{
+  width: 50%;
+  height: 25%;
+  margin: 0 0 0 25%;
+  background-image: url(images/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Content h2{
+  width: 100%;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 5% 0 0 0;
+}
+.Content p{
+  width: 45%;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 0 25%;
+}
+.Content h3{
+  font-weight: lighter;
+  margin: 2% 0 0 27%;
+}
+.claimform{
+  width: 100%;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  float: left;
+}
+.claimform h1{
+  padding: 3% 0 3% 0;
+
+}
+input[type = text],
+select{
+  width: 40%;
+  height: 5vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  padding-left: 1%  ;
+  font-size: 18px;
+  text-align: center;
+
+}
+::-webkit-input-placeholder{
+  color: lightblue;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+select {
+  font-size: 15px;
+  color: lightblue;
+  height: 6vh;
+  padding-left: 0%;
+}
+select option{
+  background-color: navy;
+  width: 100%;
+  height: 6vh;
+}
+select option:checked{
+  background-color: black;
+}
+
+
+
+
+
+input[type = submit]{
+  padding: 1% 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 2% 0 0 0;
+
+}
+label{
+  font-size: 15px;
+  margin: 2% 0 0 30%;
+  float: left;
+  position: relative;
+
+
+}
+input[type=checkbox]{
+  margin: 2.2% 0 0 0;
+  width: 5%;
+  height: 2vh;
+  background-color: black;
+  position: relative;
+  float: left;
+}
+span{
+  width: 100%;
+  height: 5vh;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  color: red;
+  font-size: 15px;
+
+}
+span p{
+  color: red;
+}
+
+
+
+
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance:none;
+   margin: 0;
+}

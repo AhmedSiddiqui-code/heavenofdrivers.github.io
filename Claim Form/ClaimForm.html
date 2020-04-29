@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="ClaimForm.css">
+  </head>
+  <body>
+      <div class="Content">
+        <div class="logo"></div>
+        <div class="info"></div>
+        <h2>Thanks for choosing us !</h2>
+        <p>Hey ! here is a form which you have to submit through this we will contact you if you have any query you can contact us through. </p>
+        <h3 >Cell # : +92 - 336 - 3550611 <br> Email : m.ahmedsiddiqui@outlook.com </h3>
+
+      </div>
+      <div class="claimform">
+        <h1>Claim Form</h1>
+        <form action="CongratulationSignUp.html"   onsubmit="return validation();">
+          <input type="text" name="text" id="firstname" placeholder="First Name" autocomplete="off"><br>
+          <span> <p id="invalidfirstname"></p> </span>
+          <input type="text" name="text" id="lastname" placeholder="Last Name" autocomplete="off"><br>
+          <span> <p id="invalidlastname"></p> </span>
+          <input type="text" name="email" id="email" placeholder="Email Address" autocomplete="off"><br>
+          <span> <p id="invalidemail"></p> </span>
+          <input type="text" name="text" id="country" placeholder="Country" autocomplete="off"><br>
+          <span> <p id="invalidcountry"></p> </span>
+          <input type="text" name="text" id="state" placeholder="State | Province" autocomplete="off"><br>
+          <span> <p id="invalidstate"></p> </span>
+          <input type="text" name="text" id="city" placeholder="City" autocomplete="off"><br>
+          <span> <p id="invalidcity"></p> </span>
+          <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')" >
+            <option value="Companies">Companies</option>
+            <option value="LAMBORGHINI">LAMBORGHINI</option>
+            <option value="FORD">FORD</option>
+            <option value="FERRARI">FERRARI</option>
+            <option value="DODGE">DODGE</option>
+            <option value="ROLLS ROYCE">ROLLS ROYCE</option>
+            <option value="MERCEDES BENZ">MERCEDES BENZ</option>
+            <option value="ASTON MARTIN">ASTON MARTIN</option>
+            <option value="LOTUS">LOTUS</option>
+          </select><span> <p id="invalidcompany"></p> </span><br><br>
+
+          <select id="slct2" name="slct2">
+            <option value="Models">Models</option>
+          </select><br>
+          <span> <p id="invalidmodel"></p> </span>
+          <input type="text" id="number" name="number" value="" placeholder="Mobile Number Ex. +XX-XXX-XXXXXXX" autocomplete="off">
+          <span> <p id="invalidnumber"></p> </span><br><br>
+
+          <label for="checked">I agree that the information I provided you is correct</label><input type="checkbox" id="checkbox" name="" value="">
+          <span> <p id="checkboxinvalid"></p> </span>
+          <br><br>
+          <input type="submit" name="" value="submit">
+        </form>
+      </div>
+
+      <script type="text/javascript">
+
+
+      var firstname =  document.getElementById('firstname');
+      var lastname =  document.getElementById('lastname');
+      var email = document.getElementById('email');
+      var number = document.getElementById('number');
+      var country = document.getElementById('country');
+      var state = document.getElementById('state');
+      var city = document.getElementById('city');
+      var checkbox = document.getElementById('checkbox');
+      var checknum = /^\+[0-9]{1,3}\-[0-9]{1,3}\-[0-9]{7}$/;
+      var checkfn = /^[Mr.]{3}[ A-Za-z]{4,14}$/;
+      var checkln = /^[A-Za-z]{4,12}$/;
+      var checkem = /^([a-z\d\.-]+)\@([a-z\d-]+)\.([a-z]{3})(\.[a-z]{2})?$/;
+
+
+      function validation() {
+
+
+
+        // FIRST NAME VALIDATION =========================
+        if (firstname) {
+          if(firstname.value == ""){
+            document.getElementById('invalidfirstname').innerHTML = "Empty Field";
+            alert("Error in Field 1");
+            return false;
+          }
+          else if (checkfn.test(firstname.value)) {
+            document.getElementById('invalidfirstname').innerHTML = "";
+
+          }
+          else{
+            document.getElementById('invalidfirstname').innerHTML = "write correctly ex. Mr. XXXXXXXXXX charecters must be less than 18";
+            alert("Error in Field 1");
+            return false;
+          }// FIRDT NAME VALIDATION ENDS =============================
+        }
+
+
+        // LAST NAME  VALIDATION ========================
+        if (lastname) {
+          if(lastname.value == ""){
+            document.getElementById('invalidlastname').innerHTML = "Empty Field";
+            alert("Error in Field 2");
+            return false;
+          }
+          else if (checkln.test(lastname.value)) {
+            document.getElementById('invalidlastname').innerHTML = "";
+
+          }
+          else{
+            document.getElementById('invalidlastname').innerHTML = "space and apecial charecters are not allowed charecters must be less than 12 ";
+            alert("Error in Field 2");
+            return false;
+          }
+        }// LAST NAME VALIDATION ENDS =========================
+
+
+        // EMAIL ADDRESS  VALIDATION ========================
+        if (email) {
+          if(email.value == ""){
+            document.getElementById('invalidemail').innerHTML = "Empty Field";
+            alert("Error in Field 3");
+            return false;
+          }
+          else if (checkem.test(email.value)) {
+            document.getElementById('invalidemail').innerHTML = "";
+
+          }
+          else{
+            document.getElementById('invalidemail').innerHTML = "please write in correct format";
+            alert("Error in Field 3");
+            return false;
+          }
+        }// EMAIL ADDRESS VALIDATION ENDS =========================
+
+        // COUNTRY VALIDATION ===========================
+        if (country) {
+          if(country.value == ""){
+            document.getElementById('invalidcountry').innerHTML = "Empty Field";
+            return false;
+          }
+          else if(country.value != ""){
+            document.getElementById('invalidcountry').innerHTML = ""
+          }
+        }// COUNTRY VALIDATION ENDS ======================
+
+
+        // STATE VALIDATION ============================
+        if (state) {
+          if(state.value == ""){
+            document.getElementById('invalidstate').innerHTML = "Empty Field";
+            return false;
+          }
+          else if(state.value != ""){
+            document.getElementById('invalidstate').innerHTML = ""
+          }
+        }// STATE VALIDATION ENDS =======================
+
+
+        // CITY VALIDATION =============================
+        if (city) {
+           if(city.value == ""){
+            document.getElementById('invalidcity').innerHTML = "Empty Field";
+            return false;
+          }
+          else if(city.value != ""){
+            document.getElementById('invalidcity').innerHTML = ""
+          }
+        }// CITY VALIDATION =================================
+
+
+        // CHECKBOX VALIDATION ============================
+        if (checkbox) {
+          if (checkbox.checked  != true) {
+            document.getElementById('checkboxinvalid').innerHTML = "please checked the checkbox";
+            return false;
+          }
+          else if (checkbox.checked  == true) {
+            document.getElementById('checkboxinvalid').innerHTML = "";
+
+          }
+        }// CHECKBOX VALIDAION ENDS ==============================
+
+
+
+        // NUMBER VALIDATION ================================
+        if (number) {
+          if(number.value == ""){
+            document.getElementById('invalidnumber').innerHTML = "Empty Field";
+            return false;
+          }
+          else if (checknum.test(number.value)) {
+            return true;
+          }
+          else{
+            document.getElementById('invalidnumber').innerHTML = "Invalid Number";
+            return false;
+          }
+        }// NUMBER VALIDATION ENDS =======================
+
+
+
+    }
+
+      function populate(s1,s2){
+
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+        s2.innerHTML = "";
+
+        if(s1.value == "LAMBORGHINI")
+        {
+          var optionArray = ["Models|Models","AVENDATOR S|AVENDATOR S","HORACAN EVO|HORACAN EVO","URUS|URUS","CENTENARIO|CENTENARIO","ESTOQUE|ESTOQUE"];
+        }
+        else if(s1.value == "FORD")
+        {
+          var optionArray = ["Models|Models","FEISTA|FEISTA","FUSION|FUSION","MUSTANG|MUSTANG"];
+        }
+        else if(s1.value == "FERRARI"){
+          var optionArray = ["Models|Models","812 SUPERFAST|812 SUPERFAST","F8 TRIBUTO|F8 TRIBUTO","SF90 STRADALE|SF90 STRADALE"];
+        }
+        else if(s1.value == "DODGE"){
+          var optionArray = ["Models|Models","CHALLENGER|CHALLENGER","CHARGER|CHARGER","JOURNEY|JOURNEY"];
+        }
+        else if(s1.value == "ROLLS ROYCE"){
+          var optionArray = ["Models|Models","PHANTOM|PHANTOM","GHOST|GHOST","WRAITH|WRAITH","DAWN|DAWN"];
+        }
+        else if(s1.value == "MERCEDES BENZ"){
+          var optionArray = ["Models|Models","AMG C 63 S|AMG C 63 S","SL-CLASS|SL-CLASS","AMG GT|AMG GT","S-CLASS|S-CLASS"];
+        }
+        else if(s1.value == "ASTON MARTIN"){
+          var optionArray = ["Models|Models","DB11|DB11","VANTAGE|VANTAGE"];
+        }
+        else if(s1.value == "LOTUS"){
+          var optionArray = ["Models|Models","EVIJA|EVIJA","EVORA|EVORA"];
+        }
+        for(var option in optionArray){
+          var pair = optionArray[option].split("|");
+          var newOption = document.createElement("option");
+          newOption.value = pair[0];
+          newOption.innerHTML = pair[1];
+          s2.options.add(newOption);
+        }
+
+
+      }
+      </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+body{
+  background-image: url(images/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+nav{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+
+}
+.logo{
+  width: 15%;
+  height: 45px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px 0px 0px 30px;
+  float: left;
+}
+ nav ul{
+  float: right;
+  margin: 15px 30px 0px 0px;
+}
+
+nav ul li{
+  display: inline-block;
+  margin: 0px 40px 0px 0px;
+  transition: 0.5s;
+}
+nav ul li:hover{
+  transform: translateY(-4px);
+  color: black;
+
+}
+nav ul li a{
+  color: white;
+  text-decoration: none;
+  font-family: 'Varela Round', serif;
+  font-size: 18px;
+  transition: 0.5s;
+
+}
+nav ul li a:hover{
+  color: #0082e6;
+
+}
+.active{
+  color: #0082e6;
+  font-weight: bold;
+}
+
+
+.question{
+  width: 80%;;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 10% 0 0 10%;
+  float: left;
+}
+.question h2{
+  padding: 2% 0 0 2%;
+}
+.answer p{
+  padding: 2%;
+  float: left;
+  font-size: 20px;
+}
+.answer{
+  width: 80%;;
+  height: 20vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  float: left;
+  margin: 0 0 0 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+  background-color: rgb(5,5,10);
+  position: absolute;
+  height: 100px;
+  float: left;
+  width: 100%;
+  top: 450%;
+}
+.f_logo{
+  width: 20%;
+  height: 60%;
+  float: left;
+  background-image: url(images/logo.png);
+  background-size: cover;
+  margin-top: 8px;
+}
+.cp{
+  width: 60%;
+  height: 40%;
+  color: white;
+  margin: 4.3% 0 0 0;
+  float: left;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.si{
+  width: 20%;
+  height: 100%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.si a,
+.si a span{
+  font-size: 25px;
+  margin: 0 10% 0 0%;
+  color: white;
+  transition: 0.5s;
+}
+.si a span:hover{
+  color: dodgerblue;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #778899;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#202020;
+}

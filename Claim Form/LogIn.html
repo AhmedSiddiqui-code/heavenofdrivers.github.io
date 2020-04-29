@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="LogIn.css">
+  </head>
+  <body>
+
+    <div class="leftcontent">
+      <div class="logo"></div>
+      <div class="contentone">
+        <p>You have to Log In to submit claim form.</p>
+      </div>
+      <div class="contenttwo">
+        <p>if you don not have a log in id please :<a href="SignUp.html" style="font-size:20px;">&nbsp;&nbsp; click here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a> to create an id. </p>
+      </div>
+      <div class="contenttwo">
+        <p>if you want to back home please : <a href="file:///C:/Users/Ahmed%20Siddiqui/OneDrive/Web/Project/index.html" style="font-size:20px;">click here  </a> </p>
+      </div>
+      <div class="contentthree">
+        <p> Cell # : 03363550611</p>
+        <p> Email  : m.ahmedsiddiqui@outlook.com</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="signin">
+        <form action="ClaimForm.html" onsubmit="return validation();" method="post">
+        <h2>Log In</h2>
+
+        <input type="text" id="email" placeholder="Email Address" autocomplete="off"><br>
+        <span> <p id="invalidemail"></p> </span>
+
+        <input type="password" id="password" placeholder="Password"><br>
+        <span> <p id="invalidpassword" ></p> </span>
+
+        <a><input type="submit" id="login" name="submit"  value="Log In"></a>
+        </form>
+        <p class="signup">don't have an account ? <a href="SignUp.html"> Sign up </a></p>
+    </div>
+
+
+    <script type="text/javascript">
+
+
+
+    var email =  document.getElementById('email');
+    var password =  document.getElementById('password');
+    var checkpss =  /^(?=.*[A-Z]{3,})(?=.*[a-z]{3,})(?=.*[0-9]{3,})[A-Za-z0-9!?]{8,20}$/;
+    var checkem =  /^([a-z\d\.-]+)\@([a-z\d-]+)\.([a-z]{3})(\.[a-z]{2})?$/;
+
+
+    function validation(){
+
+      if (email) {
+        if (email.value == "") {
+          document.getElementById('invalidemail').innerHTML = "Empty Field";
+          return false;
+        }
+        else if (checkem.test(email.value)) {
+          document.getElementById('invalidemail').innerHTML = "";
+
+        }
+        else {
+          document.getElementById('invalidemail').innerHTML = "please write in correct formate";
+          return false;
+        }
+      }
+
+        if (password) {
+          if (password.value == "") {
+            document.getElementById('invalidpassword').innerHTML = "Empty Field";
+            return false;
+          }
+          else if (checkpss.test(password.value)) {
+            document.getElementById('invalidpassword').innerHTML = "";
+
+          }
+          else {
+            document.getElementById('invalidpassword').innerHTML = "invalid password";
+            return false;
+          }
+        }
+
+      }
+
+    </script>
+
+
+
+
+
+
+  </body>
+</html>
